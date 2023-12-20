@@ -24,9 +24,17 @@ val javaVersion: Provider<String> = providers.fileContents(
   rootProject.layout.projectDirectory.file(".java-version"),
 ).asText.map { it.substringBefore('.') }
 
+val languageVersionProvider = javaVersion.map { JavaLanguageVersion.of(it) }
+
 kotlin {
   jvmToolchain {
-    languageVersion.set(javaVersion.map { JavaLanguageVersion.of(it) })
+    languageVersion.set(languageVersionProvider)
+  }
+}
+
+java {
+  toolchain {
+    languageVersion.set(languageVersionProvider)
   }
 }
 

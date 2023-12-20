@@ -1,0 +1,13 @@
+[versions]
+junit = "5.10.0"
+kotlin = "1.9.10"
+
+[libraries]
+
+assertj = { module = "org.assertj:assertj-core", version = "3.24.2" }
+
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

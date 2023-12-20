@@ -4,19 +4,16 @@ plugins {
 }
 
 dependencies {
-  api(libs.junit.jupiter.api)
-
-  implementation(kotlin("reflect"))
   implementation(gradleApi())
   implementation(gradleKotlinDsl())
 
   compileOnly(libs.jetbrains.annotations)
 
   testImplementation(gradleTestKit())
+  testImplementation(libs.junit.jupiter.api)
   testImplementation(libs.assertj)
   testImplementation(libs.navatwo.gradle.better.testing)
   testImplementation(libs.navatwo.gradle.assertj)
-  testImplementation(libs.pluginz.kotlin)
 
   testRuntimeOnly(libs.junit.jupiter.engine)
 }

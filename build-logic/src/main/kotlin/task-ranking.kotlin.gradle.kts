@@ -109,9 +109,9 @@ signing {
   sign(publishing.publications["maven"])
 }
 
-tasks.withType<Jar> {
-  archiveBaseName.set(project.provider { "task-ranking-gradle-plugin-${project.name}" })
+val projectName = project.name
 
+tasks.withType<Jar> {
   manifest {
     val gitCommit = providers.exec {
       executable("git")

@@ -1,20 +1,19 @@
-package net.navatwo.gradle.testkit.junit5
+package net.navatwo.gradle.task.ranking
 
 import net.navatwo.gradle.testkit.assertj.task
+import net.navatwo.gradle.testkit.junit5.GradleProject
 import org.assertj.core.api.Assertions.assertThat
 import org.gradle.testkit.runner.GradleRunner
 import org.junit.jupiter.api.Test
-import java.nio.file.Path
 
 class ExtensionTests {
 
   @Test
   @GradleProject(projectDir = "default-project-root")
   fun `project root as Path`(
-    @GradleProject.Root projectRoot: Path,
     @GradleProject.Runner gradleRunner: GradleRunner
   ) {
-    val result = gradleRunner.withDebug(true).withArguments("build").build()
+    val result = gradleRunner.withArguments("build").build()
     assertThat(result).task(":test").isNoSource()
   }
 }

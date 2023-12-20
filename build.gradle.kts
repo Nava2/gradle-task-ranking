@@ -22,10 +22,6 @@ repositories {
   mavenCentral()
 }
 
-apiValidation {
-  ignoredProjects += "task-ranking-gradle-plugin"
-}
-
 nexusPublishing {
   repositories {
     sonatype {

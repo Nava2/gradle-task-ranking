@@ -2,7 +2,7 @@ plugins {
   `maven-publish`
   signing
 
-  alias(libs.plugins.kotlin)
+  alias(libs.plugins.kotlin) apply false
   alias(libs.plugins.dependencyanalysis)
   alias(libs.plugins.kotlinx.binary.compatibility.validator)
 

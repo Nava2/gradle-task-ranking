@@ -1,0 +1,15 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="JUnitMalformedDeclaration" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="ignorableAnnotations">
+        <list>
+          <option value="mockit.Mocked" />
+          <option value="org.junit.jupiter.api.io.TempDir" />
+          <option value="net.navatwo.gradle.testkit.junit5.GradleProject.Root" />
+          <option value="net.navatwo.gradle.testkit.junit5.GradleProject.Runner" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

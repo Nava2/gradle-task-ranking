@@ -27,7 +27,9 @@ open class TaskRankingGradlePlugin @Inject constructor(
 
     val taskMatchingSpec = TaskSpec(target, computeRankingTask)
 
-    // TODO
+    // TODO Setup pattern for looking for applied plugins and adding the providers to each
+    //      Should this have some form of serializable key attached?
+    //      Probably use compileOnly dependencies to make this work reasonably.
     target.getOrCreateRegistryExtension().providers.apply {
       add(KotlinTaskRankingProvider)
     }

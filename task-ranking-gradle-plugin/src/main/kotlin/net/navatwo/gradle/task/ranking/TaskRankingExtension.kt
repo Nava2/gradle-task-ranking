@@ -10,4 +10,3 @@ open class TaskRankingExtension @Inject constructor(
 ) {
   val outputFileName: Property<String> = objects.property<String>().convention("task-ranking.csv")
 }
-

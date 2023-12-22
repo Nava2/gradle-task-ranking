@@ -77,4 +77,3 @@ internal fun Project.getOrCreateRegistryExtension() = if (this == rootProject) {
 } else {
   rootProject.extensions.getByType<TaskRankingRegistryExtension>()
 }
-

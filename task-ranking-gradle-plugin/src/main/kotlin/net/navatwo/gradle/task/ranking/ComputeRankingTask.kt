@@ -23,7 +23,6 @@ open class ComputeRankingTask @Inject constructor(
   private val projectExtension = project.extensions.getByType<TaskRankingExtension>()
   private val registryExtension = project.getOrCreateRegistryExtension()
 
-
   init {
     group = "reporting"
     description = "Computes the ranking of tasks in a project."
@@ -68,7 +67,6 @@ open class ComputeRankingTask @Inject constructor(
       .toMap()
 
     val taskRankings = project.tasks.map { task ->
-
     }
   }
 }

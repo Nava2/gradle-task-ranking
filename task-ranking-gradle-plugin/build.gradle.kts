@@ -7,6 +7,8 @@ dependencies {
   implementation(gradleApi())
   implementation(gradleKotlinDsl())
 
+  implementation(libs.pluginz.kotlin)
+
   compileOnly(libs.jetbrains.annotations)
 
   testImplementation(gradleTestKit())

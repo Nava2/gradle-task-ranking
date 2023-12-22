@@ -14,7 +14,3 @@ dependencies {
 
   testRuntimeOnly(libs.junit.jupiter.engine)
 }
-
-taskRanking {
-  commonFixtures.from(file("src/test/projects/common"))
-}
